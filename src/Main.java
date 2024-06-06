@@ -29,25 +29,20 @@ public class Main {
         for (int expense : weeklyExpenses) {
             general += expense;
         }
-        double mid = general / 4;
+        double mid = general / weeklyExpenses.length;
         System.out.println("Средняя сумма трат за месяц составила " + mid + " рублей");
 
 
 
-        char[] FullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        reverseFullName(FullName);
-        System.out.println(FullName);
-    }
-    public static void reverseFullName(char[] array) {
-        int leftIndex = 0;
-        int rightIndex = array.length - 1;
-        while (leftIndex < rightIndex) {
-            char temp = array[leftIndex];
-            array[leftIndex] = array[rightIndex];
-            array[rightIndex] = temp;
-            leftIndex++;
-            rightIndex--;
+        char[] fullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = 0; i < fullName.length / 2; i++) {
+            char temp = fullName[i];
+            fullName[i] = fullName[fullName.length - 1 - i];
+            fullName[fullName.length - 1 - i] = temp;
         }
+        System.out.println(fullName);
+
     }
+
 
 }
