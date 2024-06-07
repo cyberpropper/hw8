@@ -35,14 +35,13 @@ public class Main {
 
 
         char[] fullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = 0; i < fullName.length / 2; i++) {
-            char temp = fullName[i];
-            fullName[i] = fullName[fullName.length - 1 - i];
-            fullName[fullName.length - 1 - i] = temp;
+        for(int i = fullName.length - 1; i >= 0; i--) {
+            System.out.print(fullName[i]);
         }
-        System.out.println(fullName);
+        System.out.println();
 
     }
 
 
 }
+
